@@ -7,11 +7,28 @@
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
   <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
   <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
+    }
+
+    #titulo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1;
+      background-color: rgba(34, 33, 32, 0.5);
+      /* opacity: 50%; */
+      border-radius: 5px;
+    }
+
+    #titulo h2 {
+      color: #fff;
+      font-family: 'Roboto Mono', sans-serif;
+      margin: 0 0px;
+      padding: 5px;
     }
 
     #map {
@@ -25,7 +42,7 @@
       position: absolute;
       bottom: 40px;
       right: 10px;
-      font: 12px/20px 'Roboto', sans-serif;
+      font: 12px/20px 'Roboto Mono', sans-serif;
     }
 
     .legend {
@@ -34,7 +51,7 @@
       border-radius: 3px;
       bottom: 70px;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.10);
-      font: 14px/20px 'Roboto', sans-serif;
+      font: 12px/20px 'Roboto Mono', sans-serif;
       padding: 10px;
       position: absolute;
       right: 10px;
@@ -60,6 +77,10 @@
 </head>
 
 <body>
+
+  <div id="titulo">
+    <h2>VIOLENCIA VIAL: hacia los ciclistas</h2>
+  </div>
   <div id="map"></div>
 
   <button id="boton-leyenda" onclick="ocultaLeyenda()">VER/OCULTAR LEYENDA</button>
@@ -71,7 +92,7 @@
     <div><span style='background-color: #a65a1c'></span>Heridos graves</div>
     <div><span style='background-color: #9fa61c'></span>Heridos menos graves</div>
     <div><span style='background-color: #43a61c'></span>Heridos leves</div>
-    <div>tamaño indica cantidad</div>
+    <div><i>tamaño según cantidad</i></div>
     <div>
       <p>Fuente: <a href="https://mapas-conaset.opendata.arcgis.com/">CONASET</a></p>
       <p>Procesamiento datos, diseño y programación: <a href="https://ignacioabe.cl">Ignacio_Abé</a></p>
