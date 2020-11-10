@@ -1,0 +1,1 @@
+- [ ] añadir hash al url
